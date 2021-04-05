@@ -99,9 +99,9 @@ docker run -d \
   --name=mqtt \
   -p 1883:1883 \
   --label com.centurylinklabs.watchtower.enable=false \
-  -v /docker/mqtt/:/mosquitto/
-  -v /docker/mqtt/log:/mosquitto/log
-  -v /docker/mqtt/data:/mosquitto/data  
+  -v /docker/mqtt/:/mosquitto/ \
+  -v /docker/mqtt/log:/mosquitto/log \
+  -v /docker/mqtt/data:/mosquitto/data \
   --restart unless-stopped \
   eclipse-mosquitto:latest &>/dev/null
 
